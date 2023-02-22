@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📍</title>
+    <!-- <link href="/YOUR_PATH/favicon.icon" rel="icon" type="image/x-icon" /> -->
+    <link href="https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-31/128/Cars-pixar-4-icon.png" width="228"
+        height="228" rel="icon" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(img/pexels-soubhagya-maharana-5245865.jpg);
+        background-size: 200%;
+        background-repeat: no-repeat;
+        background-position-y: top;
+        overflow-x: hidden;
+    }
+
+    .img1 {
+        position: relative;
+        display: flex;
+        /* top: -50px; */
+        top: 200px;
+        animation: screen 10s infinite linear;
+    }
+
+    .img2 {
+        position: fixed;
+        /* top: 245px; */
+        top: 511px;
+        left: 180px;
+        z-index: 1;
+        animation: car 1s infinite;
+    }
+
+    .img3 {
+        position: fixed;
+        /* top: 482px; */
+        top: 749px;
+        left: 243px;
+        z-index: 1;
+
+
+    }
+
+    .pause {
+        animation-play-state: paused;
+    }
+
+    .playWheel {
+        /* animation-play-state: running; */
+        animation: wheel 0.7s infinite linear;
+    }
+
+    /* .wheelanimate#wheelid2 {
+        animation-play-state: running;
+    } */
+
+    /* .stopAnimation{
+        animation-play-state: paused;
+    } */
+
+    .img4 {
+        position: fixed;
+        /* top: 482px; */
+        top: 749px;
+        left: 546px;
+        z-index: 1;
+        object-fit: contain;
+        /* animation: wheel 0.7s infinite linear; */
+    }
+
+
+    .img5 {
+        position: relative;
+        /* bottom: 115px; */
+        bottom: -138px;
+        animation: road 5s infinite linear;
+    }
+
+    .img6 {
+        position: relative;
+        /* top: -230px; */
+        top: 39px;
+        /* left: 417px; */
+        left: 416px;
+    }
+
+    .btn {
+        font-size: 30px;
+        padding: 8px;
+        background: yellow;
+        font-family: fantasy;
+        letter-spacing: 4px;
+        border-radius: 14px;
+    }
+
+    @media(max-width: 800px) {
+        body {
+            background-size: 400%;
+        }
+
+        .img1 {
+            top: 330px !important;
+        }
+
+        .img2 {
+            top: 625px !important;
+            left: 180px !important;
+        }
+
+        .img3 {
+            top: 864px !important;
+            left: 242px !important;
+        }
+
+        .img4 {
+            top: 864px !important;
+            left: 546px !important;
+        }
+
+        .img5 {
+            bottom: -250px !important;
+        }
+
+        .img6 {
+            top: 151px !important;
+            left: 414px !important;
+        }
+    }
+
+    @keyframes wheel {
+        0% {
+            transform: rotate(0deg);
+
+        }
+
+        10% {
+            transform: rotate(36deg);
+
+        }
+
+        20% {
+            transform: rotate(72deg);
+
+        }
+
+        30% {
+            transform: rotate(108deg);
+
+        }
+
+        40% {
+            transform: rotate(144deg);
+
+        }
+
+        50% {
+            transform: rotate(180deg);
+
+        }
+
+        60% {
+            transform: rotate(216deg);
+
+        }
+
+        70% {
+            transform: rotate(252deg);
+
+        }
+
+        80% {
+            transform: rotate(288deg);
+
+        }
+
+        90% {
+            transform: rotate(324deg);
+
+        }
+
+        100% {
+            transform: rotate(360deg);
+
+        }
+
+    }
+
+    @keyframes screen {
+        0% {
+            transform: translatex(0%);
+
+        }
+
+        10% {
+            transform: translatex(-10%);
+
+        }
+
+        20% {
+            transform: translatex(-20%);
+
+        }
+
+        30% {
+            transform: translatex(-30%);
+
+        }
+
+        40% {
+            transform: translatex(-40%);
+
+        }
+
+        50% {
+            transform: translatex(-50%);
+
+        }
+
+        60% {
+            transform: translatex(-60%);
+
+        }
+
+        70% {
+            transform: translatex(-70%);
+
+        }
+
+        80% {
+            transform: translatex(-80%);
+
+        }
+
+        90% {
+            transform: translatex(-90%);
+
+        }
+
+        100% {
+            transform: translatex(-100%);
+
+        }
+
+    }
+
+    @keyframes road {
+        0% {
+            transform: translatex(0%);
+        }
+
+        10% {
+            transform: translatex(-10%);
+        }
+
+        20% {
+            transform: translatex(-20%);
+        }
+
+        30% {
+            transform: translatex(-30%);
+        }
+
+        40% {
+            transform: translatex(-40%);
+        }
+
+        50% {
+            transform: translatex(-50%);
+        }
+
+        60% {
+            transform: translatex(-60%);
+        }
+
+        70% {
+            transform: translatex(-70%);
+        }
+
+        80% {
+            transform: translatex(-80%);
+        }
+
+        90% {
+            transform: translatex(-90%);
+        }
+
+        100% {
+            transform: translatex(-100%);
+        }
+    }
+</style>
+
+<body>
+    <button class="btn" id="runBtn">run</button>
+    <button class="btn" id="pauseBtn">pause</button>
+    <div class="main">
+        <div class="sub">
+            <div style="display:flex;">
+                <img class="img1 " src="img/City Buildings.png" alt="">
+                <img class="img1 " src="img/City Buildings.png" alt="">
+            </div>
+            <img class="img2" width="500px" src="img/car-png-16843.png" alt="">
+            <img class="img3 playWheel" width="90px" src="img/fotor_2023-2-21_18_20_10.png" alt="t1">
+            <img class="img4 playWheel" width="90px" src="img/fotor_2023-2-21_18_20_10.png" alt="t2">
+            <div class="road_main" style="display: flex;position: fixed;">
+                <img class="img5 " src="img/fotor_2023-2-21_20_43_34.png" alt="">
+                <img class="img5 " src="img/fotor_2023-2-21_20_43_34.png" alt="">
+                <img class="img5 " src="img/fotor_2023-2-21_20_43_34.png" alt="">
+                <img class="img5 " src="img/fotor_2023-2-21_20_43_34.png" alt="">
+            </div>
+            <img width="100px" class="img6" src="img/PngItem_2774291.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        // const runBtn = document.getElementById('runBtn')
+        // const pauseBtn = document.getElementById('pauseBtn')
+
+        // pauseBtn.addEventListener('click', ()=> {
+        //     let tyre1 = document.querySelectorAll('.wheelanimate1')
+        //     tyre1.forEach(e => {
+        //         e.classList.remove('wheelanimate1')
+
+        //     })
+        // })
+
+        const wheel = document.querySelectorAll('.wheelanimate')
+        runBtn.addEventListener('click', () => {
+            if (!wheelid.classList.contains('wheelanimate')) {
+                wheelid.classList.add('wheelanimate')
+            }
+        })
+        pauseBtn.addEventListener('click', () => {
+            let play = document.querySelectorAll('.playWheel');
+            console.log(play);
+            for (let i = 0; i < play.length; i++) {
+                // console.log( play[i].classList);
+                play[i].classList.add('pause');
+                play[i].classList.remove('playWheel');
+            }
+            // play.map((el)=>{
+            // })
+
+            // wheelid.classList.remove('wheelanimate')
+        })
+    </script>
+</body>
+
+</html>
